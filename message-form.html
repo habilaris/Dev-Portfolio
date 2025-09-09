@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Form</title>
+    <style>
+        body {
+            font-family: Geneva, Verdana, sans-serif;
+            background: #dedede;
+            color: rgb(71, 69, 69);
+        }
+
+        form {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.128), -2px -2px 2px rgb(255, 255, 255);
+            background: rgb(240, 240, 240);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            width: 300px;
+            flex-direction: column;
+        }
+
+        #message-form {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input, textarea {
+            border: none;
+            padding: 8px 8px;
+            border-radius: 3px;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.128), inset -2px -2px 5px rgb(239, 238, 238);
+        }
+
+        input[type='submit'] {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.128), -2px -2px 5px white;
+            width: 70px;
+
+            &:active {
+                box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.128), inset -2px -2px 5px white;
+            }
+        }
+
+        .container {
+            text-align: end;
+        }
+
+        textarea {
+            height: 50px;
+            resize: none;
+        }
+
+       label {
+            margin-bottom: -16px;
+        }
+
+
+        .inp {
+            margin-bottom: -5px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="message-form">
+        <h2>Message Me</h2>
+        <form action="">
+            <label for="username">Username</label><br>
+            <input type="text" placeholder="John" id="username" required class="inp"><br>
+
+            <label for="email">Email</label><br>
+            <input type="text" placeholder="John@gmail.com" class="inp"><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" class="inp">Your message</textarea><br>
+
+            <div class="container">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

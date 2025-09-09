@@ -1,0 +1,348 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color: rgb(186, 186, 186);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background: #c6c6c5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+/* __________________________________________________________________________________________________________ */
+
+section {
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100dvh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* __________________________________________________________________________________________________________ */
+
+/* Navbar */
+
+nav {
+    background-color: white;
+    display: flex;
+    height: 75px;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+/* __________________________________________________________________________________________________________ */
+
+#wrapper, #wrapper2 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#About {
+    height: 95vh;
+    width: 95vw;
+    background: url(Images/ss.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(222, 222, 222);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.9), -3px -3px 7px rgba(74, 74, 74, 0.626);
+    border-radius: 10px;
+    padding: 150px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+}
+
+#About h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+#About .container {
+    padding: 40px;
+    background: rgba(37, 37, 37, 0.6);
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.461), -1px -1px 4px rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.18); /* subtle border */
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+}
+
+#About .container a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 12px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.511), -1px -1px 5px rgba(206, 206, 206, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:hover {
+        transform: scale(1.04);
+    }
+
+    &:active {
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.511), inset -1px -1px 5px rgba(206, 206, 206, 0.2);
+    }
+}
+
+#vc {
+    margin-left: 12px;
+    background: rgba(255, 179, 0, 0.826);
+}
+
+/* __________________________________________________________________________________________________________ */
+
+#Contact h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgb(29, 29, 29, 0.5), -1px -1px 6px rgb(234, 234, 234);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#Contact .container {
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.461), -2px -2px 4px white;
+    background: radial-gradient(circle,rgb(237, 237, 237) 0%, rgba(148, 148, 148, 1) 72%, rgba(137, 138, 140, 1) 100%);
+    
+}
+
+#icons-container {
+    margin-top: 15px;
+}
+
+#Contact .container p {
+    background: linear-gradient(to right, #1d1d1d, #606060, #323232); /* Your gradient colors */
+    -webkit-background-clip: text;    /* Clips background to text */
+    -webkit-text-fill-color: transparent;  /* Makes the text transparent to show background */
+}
+
+/* __________________________________________________________________________________________________________ */
+
+a img {
+    height: 34px;
+}
+
+
+
+#Home h1 {
+    color: white;
+    text-shadow: 2px 2px 5px rgb(29, 29, 29, 0.3);
+    font-size: 200px;
+}
+
+/* __________________________________________________________________________________________________________ */
+
+/* Animation and Hover Effect */
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes popUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+
+    transform: translateX(0);
+    animation: fadeIn 1.15s ease forwards;
+    transition: transform 0.3s ease;
+}
+
+#Home img {
+    position: absolute;
+    z-index: 1;
+
+    /* top, left, right, bottom — Move relative to the parent.*/
+    top: 50%;
+    left: 50%;
+
+    /* transform: translate(X%, Y%) — Moves the element relative to itself */
+    transform: translate(-50%, -50%); /* First value inside round bracket if for x-axis and second is y-axis*/
+    height: 460px;
+
+    /* Styling of image */
+    border: 15px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+    &:hover {
+        transform: translate(-50%, -55%);
+    }
+}
+
+.effects:hover {
+    cursor: default;
+    transform: translateX(0) scale(1.2);
+}
+
+/* __________________________________________________________________________________________________________ */
+
+.footer {
+    padding: 40px;
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    height: 50px;
+    align-items: center;
+}
+
+.footer img {
+    position: relative;
+    transform: translateY(3px);
+}
+
+/* __________________________________________________________________________________________________________ */
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+
+#Projects h2 {
+    font-size: 100px;
+    color: #3c3636;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    /* text-shadow: 2px 2px 5px rgb(29, 29, 29, 0.5), -2px -2px 4px rgba(202, 202, 202, 0.705); */
+}
+
+#Projects p {
+    font-size: 13px;
+}
+
+.cards {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.2), 1px 1px 4px rgb(0, 0, 0, 0.2);
+
+    &:hover {
+        transform: scale(1.04);
+    }
+}
+
+
+.projects-container img {
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-container {
+    color: rgb(57, 57, 57);
+    padding: 20px;
+
+}
+
+.text-container h3 {
+    margin-bottom: 10px;
+}
+
+#headline {
+    color: #828282;
+    margin-bottom: 4px;
+    text-shadow: none;
+}
+
+
+#Projects {
+    height: 90vh;
+    width: 100vw;
+    background: rgb(250, 250, 250);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(222, 222, 222);
+    box-shadow: 3px 3px 5px rgba(60, 59, 59, 0.2), -2px -2px 4px rgba(201, 201, 201, 0.3);
+    padding: 150px;
+}
+
+#Projects a {
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #828282;
+}
