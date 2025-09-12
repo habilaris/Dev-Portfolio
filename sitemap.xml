@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This first line declares the XML version and character encoding -->
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- <urlset> is the root element required for all sitemaps.
+       The xmlns attribute tells search engines which schema (rules) this XML follows. -->
+
+  <url>
+    <!-- Each <url> block defines one page of your website -->
+
+    <loc>https://habilaris.github.io/Dev-Portfolio/</loc>
+    <!-- <loc> = Location of the page you want Google to index.
+         Replace with the full URL of your portfolio page. -->
+
+    <lastmod>2025-09-13</lastmod>
+    <!-- <lastmod> = The last date this page was updated.
+         Format must be YYYY-MM-DD. Keep it updated when you make changes. -->
+
+    <changefreq>weekly</changefreq>
+    <!-- <changefreq> = How often this page is likely to change.
+         Options: always, hourly, daily, weekly, monthly, yearly, never.
+         For a static portfolio, 'monthly' is fine. -->
+
+    <priority>1.0</priority>
+    <!-- <priority> = Importance of this page (0.0 to 1.0).
+         Since you only have one page, give it the maximum (1.0). -->
+  </url>
+
+</urlset>
